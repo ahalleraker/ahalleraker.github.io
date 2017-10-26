@@ -1,0 +1,9 @@
+div div:nth-child(2) span {
+    color: red;
+}
+div div::first-letter{
+    color: green;
+    font-size: 200%;
+    font-variant: common-ligatures small-caps;
+    padding-right:5px;
+}

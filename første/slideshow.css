@@ -1,0 +1,25 @@
+:root {
+    --slideshow-bg:black;
+}
+#slideshow {
+    background: url("natur6.jpg");
+    position: relative;
+    left: 2em;
+    top: 2em;border: 2px solid gray;
+    width: calc(100% - 4em);
+    height: 100%;
+    background-color: var(--slideshow-bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2em; 
+    animation: slideshow 18s ease-in infinite;
+}
+
+@keyframes slideshow {
+    17% { background-image: url("natur1.jpg")}
+    33% { background-image: url("natur4.jpg")}
+    50% { background-image: url("natur2.jpeg")}
+    66% { background-image: url("natur3.jpg")}
+    83% { background-image: url("natur5.jpg")}
+    100% { background-image: url("natur6.jpg")}
+}
