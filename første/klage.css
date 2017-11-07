@@ -41,3 +41,38 @@ button:active {
     width: 5em;
     height: 5em;
 }
+
+Binærtall
+
+Alle datamaskiner og alle andre elektroniske instrumenter bruker teknologi
+som hviler på totallsystemet, også kalt det binære tallsystemet. Binærtall 
+er språket elektronikken kommuniserer med.
+
+Et binærtall konverteres til desimaltall på denne måten:
+Eks: 10010111
+
+128	64	32	16	8	4	2	1
+1	0	0	1	0	1	1	1
+Summer tallene der binærtallet har siffer 1: 128+16+4+2+1
+
+
+
+
+Heksadesimale tall
+
+Sekstentallsystemet, bedre kjent som det heksadesimale tallsystemet, forkortet hex, er et tallsystem med grunntall eller base 16. Tallsystemet har 16 ulike siffer: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E og F. Det tallsystemet vi bruker til vanlig, kalles titallsystemet eller det desimale system. De heksadesimale sifrene A, B, C, D, E og F representerer titallsystemets verdier 10, 11, 12, 13, 14 og 15.
+Binærtall kan koverteres til heksadeismale tall slik:
+
+Grupper binærtallet i grupper på 4 bits
+Skriv over tallfølgen: 1, 2, 4, 8 slik som med desimaltall
+For hver gruppe får vi da et heksaadesimalt siffer
+0-9 er uendra, 10=A, 11=B, 12=C ... 15=F
+Eks: 1101
+
+8	4	2	1
+1	1	0	1
+Vi summmerer da 8+4+1=13, 13 = D
+
+
+
+
