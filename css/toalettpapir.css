@@ -1,0 +1,40 @@
+.innhold{ 
+padding:0% 16%
+}
+
+#tittel {
+    position: absolute;
+    top:10%;
+    left:45%;
+}
+
+#textbox{
+    background-color:rgb(182, 182, 182);
+    width:200px;
+    height:300px;
+    color: Black;
+    position: absolute;
+    left:77%;
+    top:50%;
+    box-shadow: 10px 10px 3px gray;
+}
+
+#textbox h1{
+    padding:0px 19px;
+}
+
+#textbox h3{
+    padding:0px 10px;
+}
+
+
+#bilde{
+    position: absolute;
+    left:25%;
+    top:20%;
+}
+
+
+
+
+
