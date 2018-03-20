@@ -82,3 +82,38 @@ right:0;
   display: none;
   color: #FFF;
 }
+
+@keyframes dale {
+  0% {top: 0px;}
+  100% {top: 90vh;}
+}
+
+.snow {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+  animation: dale 5s linear infinite;
+  animation-fill-mode: forwards;
+}
+
+#santa {
+  position: absolute;
+  left: -250px;
+  top:50px;
+  width: 250px;
+  height: 180px;
+  animation: drive 5s 1s linear infinite; 
+  background-image: url("santa.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: 0px;
+}
+
+@keyframes drive {
+  0% { left: -250px; }
+ 100% { left: 150vw; } 
+}
