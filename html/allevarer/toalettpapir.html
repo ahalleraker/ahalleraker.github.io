@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/nettshop.css">
+  <link rel="stylesheet" href="../../css/allevarer.css">
+  <link rel="stylesheet" href="../../css/toalettpapir.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+  <title> Nettshop </title>
+
+
+</head>
+
+<body>
+  <div>
+    <ul>
+      <li>
+        <a href="../hjem.html">Hjem</a>
+      </li>
+      <li>
+        <a href="../nyheter.html">Nyheter</a>
+      </li>
+      <li>
+        <a href="../allevarer.html">Alle varer</a>
+      </li>
+      <li>
+        <a href="../tilkassa.html">Til Kassa</a>
+      </li>
+      <li>
+        <a href="../omoss.html">Om oss</a>
+      </li>
+      <div>
+        <img src="../../bilder/logos.png" width="500" height="67"> </div>
+      <li style="float:right">
+        <a class="active" href="../../index.html">Logg ut</a>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <div class="sidenav">
+
+      <div class="search-container">
+          <input type="text" placeholder="Søk.." id="find" name="search">
+          <button type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+      </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <button class="dropdown-btn">Papir
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="toalettpapir.html">Toalett papir</a>
+      <a href="torkepapir.html">Tørke papir</a>
+    </div>
+    <a href="ved.html">Ved</a>
+    <button class="dropdown-btn">Saft og syltetøy
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="saft.html">Saft</a>
+      <a href="syltetoy.html">syltetøy</a>
+    </div>
+
+    <a href="solbriller.html">Solbriller</a>
+    <a href="sykkler.html">Sykkler</a>
+    <a href="klokker.html">Klokker</a>
+    <button class="dropdown-btn">Sko
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="nike.html">Nike</a>
+      <a href="dc.html">DC</a>
+      <a href="rieker.html">Rieker</a>
+      <a href="toms.html">Toms</a>
+    </div>
+    <a href="ledderman.html">Ledderman</a>
+  </div>
+
+
+  <script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+
+  <div class="innhold">
+
+
+
+    <div id="tittel">
+      <h1>Nicky Toalettpapir</h1>
+    </div>
+
+    <div id="bilde">
+      <img src="../../bilder/nicky.jpg" width="700" height="500">
+    </div>
+
+    <div id="textbox">
+      <div>
+        <h3>
+          Nicky Ultrasoft er et svanemerket, 3 lags toalettpapir av top kvalitet.Vi selger Nicky Ultrasoft i sekker på 56 ruller, for
+          bare 400kr.
+
+        </h3>
+      </div>
+    </div>
+
+    <form>
+      <button data-pris="400" data-varenavn="Toalettpapir" type="button" id="kjop">
+        Legg til i handlekurv
+        
+      </button>
+
+    </form>
+
+    <div> 
+      <label id="navn">Navn</label>
+      <input id="kunde" type="text"> </div>
+
+
+    </div>
+
+
+
+  </div>
+
+ 
+ <script>
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAbltnFurdLWsqUP_mdkqnAR7PhBdoi3ag",
+    authDomain: "nettshop-f76b3.firebaseapp.com",
+    databaseURL: "https://nettshop-f76b3.firebaseio.com",
+    projectId: "nettshop-f76b3",
+    storageBucket: "nettshop-f76b3.appspot.com",
+    messagingSenderId: "171123018845"
+  };
+  firebase.initializeApp(config);
+  let database = firebase.database();
+
+
+
+
+    let btnKjop = document.getElementById("kjop");
+    btnKjop.addEventListener("click", kjopTing);
+
+    function kjopTing(e) {
+      let kunde = document.getElementById("kunde").value;
+      let pris = this.dataset.pris;
+      let vare = this.dataset.varenavn;
+      let ref = database.ref("bestilling/" + kunde);
+        ref.set({ vare,pris });
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCSVh7Xcbqu4xELMqqHvLRc9yCHjAU1Fkc",
+    authDomain: "nettshopsok.firebaseapp.com",
+    databaseURL: "https://nettshopsok.firebaseio.com",
+    projectId: "nettshopsok",
+    storageBucket: "",
+    messagingSenderId: "66631740488"
+  };
+  firebase.initializeApp(config);
+
+
+
+
+  let database = firebase.database();
+
+let inpFind = document.getElementById("find"); // kobling til søkefeltet
+inpFind.addEventListener("keydown", finnOrd);
+let divResultat = document.getElementById("resultat"); // kobling til div#resultat
+
+function finnOrd(e) {
+    if (e.keyCode === 13) { // bruker trykket return
+        let valgt = inpFind.value;
+        let ref = firebase.database().ref("dyr").orderByChild("navn").equalTo(valgt);
+        ref.once("value").then(function (snapshot) {
+            let funnet = snapshot.val();
+            if (funnet) {
+                // vi fant noe som matcher
+                let htm = Object.entries(funnet).map(([k,v]) => {
+                  let felt = Object.entries(v).map(([k,v]) => 
+                      `<li>${k} : ${v}</li>`
+                  );
+                  return `${k} <ul>${felt.join('')}</ul>`;
+                });
+                divResultat.innerHTML = htm;
+            } else {
+                divResultat.innerHTML = "Ingen treff (sjekk stor/liten bokstav)";
+            }
+        });
+    }
+}
+
+</script>
+
+
+
+
+</body>
+
+</html>
