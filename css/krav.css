@@ -1,0 +1,18 @@
+#textbox{
+    background-color:rgba(81, 189, 84, 0.842);
+    width:900px;
+    height:775px;
+    color: Black;
+    position: absolute;
+    left:5%;
+    top:15%;
+    box-shadow: 10px 10px 3px gray;
+}
+
+#textbox h1{
+    padding:0px 19px;
+}
+
+#textbox h3{
+    padding:10px
+}
