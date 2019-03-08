@@ -1,0 +1,174 @@
+body {
+    background-color: gray;
+}
+
+#scoreboard {
+    position: absolute;
+    left: 50px;
+    top: 80px;
+    height:450px;
+    width: 250px;
+    background-color: rgba(250, 250, 250, 0.329);
+    box-shadow: 10px 7px;
+}
+
+#x-scoreboard {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    height: 400px;
+    width: 113px;
+}
+
+#o-scoreboard {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    height: 400px;
+    width: 113px;
+    color: red;
+}
+
+
+#title-scoreboard {
+    position: absolute;
+    top: 2px;
+    left: 55px;
+}
+
+#title{
+    position: absolute;
+    left: 41%;
+    top: 6%;
+}
+
+.ruter {
+    height:290px;
+    width:290px;
+    background-color: black;
+    position: absolute;
+    left:36%;
+    top:30%;
+}
+
+
+#rute1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 90px;
+    width: 90px;
+    font-size: 80px;
+}
+
+#rute2 {
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    height: 90px;
+    width: 90px;
+    font-size: 80px;
+}
+
+#rute3 {
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    height: 90px;
+    width: 90px;
+    font-size: 80px;
+}
+
+#rute4 {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    height: 90px;
+    width: 90px;
+    font-size: 80px;
+}
+
+#rute5 {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    height: 90px;
+    width: 90px;
+    font-size: 80px;
+}
+
+#rute6 {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    height: 90px;
+    width: 90px;
+    font-size: 80px;
+}
+
+#rute7 {
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    height: 90px;
+    width: 90px;
+    font-size: 80px;
+}
+
+#rute8 {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    height: 90px;
+    width: 90px;
+    font-size: 80px;
+}
+
+#rute9 {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    height: 90px;
+    width: 90px;
+    font-size: 80px;
+}
+
+#playerstatus {
+    height:70px;
+    width: 215px;
+    position: absolute;
+    left: 39%;
+    bottom: 0;
+    font-size: 70px;
+    color: red;
+    
+}
+
+#playerstatus::first-letter {
+    color: black;
+}
+
+#playerstatusaniboks {
+    height:100px;
+    width: 215px;
+    position: absolute;
+    left: 39%;
+    bottom: 10%;
+}
+
+#playerstatusani {
+    position: absolute;
+    top:0;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background: url("bilder/lyspære.png");
+    width: 90px;
+    height: 100px;
+    animation: ani 1s linear infinite reverse ;
+}
+
+@keyframes ani {
+    0%{top:0%; left:55%; transform: translateX(0);}
+    100%{top:0%; left:-55%; transform: translateX(100px);}
+}
